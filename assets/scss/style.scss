@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+}
+.button{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 148%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #57B3FE;
+    letter-spacing: 0.02em;
+    padding: 20px 50px;
+    background: #FFFFFF;
+    border-radius: 60px;
+}
+$fontPrimary: 'DM Sans', sans-serif;
+$linkSize: 16px;
+$primaryStyle: normal;
+$primaryColor: #FFFFFF;
+$primaryBottom: 220px;
+@mixin flexFeatures {
+    display: flex;
+    justify-content: center;
+}
+@mixin textFeatures {
+    color: $primaryColor;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto; 
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $fontPrimary;
+    font-style: $linkSize;
+    .page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        .bg img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+        }
+        .header {
+            display: flex;
+            max-width: 1802px;
+            min-height: 95px;
+            align-items: center;
+            margin: 0px 10px;
+            .header__menu {
+                @include flexFeatures;
+                flex: 1 1 auto;
+                .menu__list{
+                    @include flexFeatures;
+                    flex-flow: row nowrap;
+                    gap: 32px;
+                    .menu__link {
+                        font-weight: 500;
+                        font-size: $linkSize;
+                        line-height: 100%;
+                        color: $primaryColor;
+                    }
+                    .menu__link_active {
+                        font-weight: 700;
+                        font-size: $linkSize;
+                        line-height: 100%;
+                        color: $primaryColor;
+                    }
+                }
+            .header__button {
+                display: flex;
+                justify-content: flex-end;
+            }   
+            }
+        }
+            .get-started {
+                margin-bottom: 220px;
+                .get-started__content{
+                    display: flex;
+                    flex-direction: column;
+                    .block-text {
+                        padding: 50px;
+                        .block-text__title {
+                            font-weight: 500;
+                            font-size: 68px;
+                            line-height: 120%;
+                            @include textFeatures;
+                        }
+                        .block-text__text {
+                            font-weight: 400;
+                            font-size: 20px;
+                            opacity: 0.8;
+                            @include textFeatures;
+                        }
+                    }
+                    .get-started__button {
+                        text-align: center;
+                    }
+                    .get-started__image img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .help {
+                background-image: url("../../pictures/bg2.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                max-width: 1920px;
+                min-height: 843px; 
+                margin-bottom: 220px;
+                .help__text {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-left: 20px;
+                    .title {
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 122%;
+                        letter-spacing: 0.15em;
+                        text-transform: uppercase;
+                        color: #00A077;
+                        opacity: 0.5;
+                    }
+                    .subtitle{
+                        font-weight: 500;
+                        font-size: 48px;
+                        line-height: 122%;
+                        color: #3B3E43;
+                    }
+                }
+                .window {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    .block {
+                        margin: 10px;
+                        width: 370px;
+                        height: 335px;
+                        background-color: #FFFFFF;
+                        box-shadow: 0px 20px 50px rgba(59, 62, 67, 0.05);
+                        border-radius: 15px;
+                        .block__content content{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 20px;
+                        }
+                    }
+                }
+            } 
+    }           
+}
+  
+
+@media screen and (max-width: 900px) {
+    .menu__list {
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .header__button {
+      display: none;
+    }
+}
+@media screen and (max-width: 1230px) {
+    .process__blocks {
+      flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px) {
+    .process__blocks-image {
+      max-width: 100%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .start-working__content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .menu__burger {
+        display: none;
+    }
+}
+@media screen and (min-width: 900px) {
+    .menu__burger {
+        display: none;
+    }
+}
+@media screen and (max-width: 900px) {
+    .menu__burger {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .footer__menu {
+        display: none;
+    }
+}
